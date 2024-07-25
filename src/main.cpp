@@ -3,25 +3,26 @@
 
 int main()
 {
-    Color darkGreen = Color{20, 160, 133, 255};
-
-    const int screenWidth = 800;
-    const int screenHeight = 600;
+    const int SCREEN_WIDTH = 800;
+    const int SCREEN_HEIGHT = 600;
 
     Ball ball = Ball();
 
-    InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "ARDONITE");
     SetTargetFPS(60);
 
     while (!WindowShouldClose())
     {
         BeginDrawing();
-        ClearBackground(darkGreen);
+        ClearBackground(RAYWHITE);
+
         ball.Update();
         ball.Draw();
+
         EndDrawing();
     }
 
     CloseWindow();
+
     return 0;
 }
